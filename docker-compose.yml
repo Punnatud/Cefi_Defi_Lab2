@@ -1,0 +1,13 @@
+version: '3'
+services:
+  node:
+    image: node:14
+    volumes:
+      - .:/lab2
+    command:  bash -c "cd /lab2 && npm test"
+    environment:
+      ALCHE_API: "https://eth-mainnet.g.alchemy.com/v2/iXXB9G1wHzgevh3XjKjyBb0in_CVyY-c"
+  
+volumes:
+  node_modules:
+    driver: local
